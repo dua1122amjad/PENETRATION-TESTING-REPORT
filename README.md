@@ -91,6 +91,7 @@ The footprinting phase utilized 6 core Kali Linux tools to combine registration 
 
 ```bash
 whois example-lab.invalid
+```
 Sanitized Observation: Demonstrated that WHOIS exposes registrar details, domain status, and name-server configurations.
-
+Security Relevance: Provides structural and administrative context regarding target domain ownership.
 Security Relevance: Provides structural and administrative context regarding target domain ownership.
