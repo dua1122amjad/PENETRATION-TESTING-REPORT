@@ -109,3 +109,10 @@ whatweb example-lab.invalid
 nslookup example-lab.invalid
 ```
 - **Sanitized Observation:** Resolved the target domain to a documentation-safe IP (`192.0.2.10`).
+### 5.4 Curl -I
+**Objective:** Inspect HTTP response headers.
+
+```bash
+curl -I [https://example-lab.invalid](https://example-lab.invalid)
+```
+- **Sanitized Observation:** Returned HTTP status codes, web server headers, caching parameters, and active API endpoints.
