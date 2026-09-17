@@ -162,3 +162,43 @@ Active ports 135, 139, and 445 indicate standard Windows network endpoints. Thei
 | **3** | Multiple Open Network Services | Zenmap identified TCP 135, 139, and 445 on the host. | Unnecessary or unsegmented service exposure increases attack surface. | Medium |
 | **4** | Visible HTTP Metadata | Curl response headers revealed server details. | Provides information useful for reconnaissance mapping. | Low |
 | **5** | Identifiable WAF Protection | Wafw00f detected WAF defensive layers. | Informs analysis of existing perimeter defenses. | Low |
+## 8. Recommendations & Mitigations
+
+* **Header Suppression:** Suppress web server version banners and detailed software headers.
+* **SMB Hardening:** Restrict ports 135, 139, and 445 to trusted management networks via firewalls.
+* **Patch Management:** Maintain current patch levels across CMS engines and network services.
+* **Internal Discovery:** Perform periodic Nmap scans to maintain host and service inventory accuracy.
+* **DNS Auditing:** Audit published DNS records regularly to remove unneeded entry points.
+ ## 9. Evidence Summary
+
+| Evidence Item | Module | Used in Report | Sanitization |
+| :--- | :--- | :--- | :--- |
+| **WHOIS result** | W2-PM1 | Footprinting / Registration data | Registration identifiers omitted |
+| **WhatWeb result** | W2-PM1 | Technology fingerprinting | Live domain/IP omitted |
+| **Nslookup result** | W2-PM1 | DNS resolution | Replaced with 192.0.2.10 |
+| **Curl -I result** | W2-PM1 | HTTP-header review | Live domain identifiers omitted |
+| **Wafw00f result** | W2-PM1 | WAF detection | Target identifier omitted |
+| **DNSRecon result** | W2-PM1 | DNS enumeration | Live records/IPs omitted |
+| **Zenmap result** | W2-PM5 | Network discovery | Replaced with 192.0.2.0/24 range |
+## 10. Conclusion
+This Week 2 practical successfully fulfilled the requirements for elective module W2-PM1 (Footprinting with 6 Kali tools) and essential module W2-PM5 (Zenmap Network Scanning). The findings were documented and evaluated in accordance with W2-PM-FINAL reporting standards, reinforcing authorized, non-intrusive reconnaissance procedures.
+## Appendices
+
+### Appendix A – Command Reference
+
+```bash
+# W2-PM1: Footprinting Commands
+whois example-lab.invalid
+whatweb example-lab.invalid
+nslookup example-lab.invalid
+curl -I [https://example-lab.invalid](https://example-lab.invalid)
+wafw00f example-lab.invalid
+dnsrecon -d example-lab.invalid
+
+# W2-PM5: Network Scanning Commands
+ipconfig
+nmap -sn 192.0.2.0/24
+```
+### Appendix B – Sanitization Note
+
+All target identifiers, domains, and IP addresses have been converted to synthetic documentation values (`example-lab.invalid` and `192.0.2.0/24`).
