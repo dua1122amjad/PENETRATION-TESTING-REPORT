@@ -16,7 +16,7 @@
 | **Sanitization** | Live IPs, domains, emails and other identifiers replaced with documentation-safe values |
 | **Report Status** | Sanitized submission-ready draft |
 
-> 🔒 **Authorization & Safety Notice:**  
+>  **Authorization & Safety Notice:**  
 > All reconnaissance and scanning activities described in this report are presented as authorized educational exercises. The report intentionally uses documentation-only IP ranges and synthetic identifiers so that the final document does not expose live infrastructure details. Prepared for educational and portfolio use.
 
 ---
@@ -144,3 +144,21 @@ Retrieved the host interface parameters prior to scanning.
 nmap -sn 192.0.2.0/24
 ```
 The scan detected 1 active host (192.0.2.25) with three open TCP services:
+| Sanitized Host | Port | State | Service | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 192.0.2.25 | 135/tcp | open | msrpc | Microsoft RPC Endpoint Mapper |
+| 192.0.2.25 | 139/tcp | open | netbios-ssn | NetBIOS Session Service |
+| 192.0.2.25 | 445/tcp | open | microsoft-ds | SMB File Sharing over IP |
+### 6.3 Interpretation
+Active ports 135, 139, and 445 indicate standard Windows network endpoints. Their detection highlights areas for administrative configuration review and service exposure auditing.
+
+ Safety Boundary: No exploitation, password attacks, or unauthorized access attempts were conducted during this exercise.
+## 7. Module W2-PM-FINAL: Risk Analysis & Impact
+
+| # | Finding | Evidence / Observation | Potential Impact | Risk Level |
+| :-: | :--- | :--- | :--- | :-: |
+| **1** | Web Technology Information Exposed | WhatWeb identified application and server banners. | May assist adversaries in targeting version-specific vulnerabilities. | Medium |
+| **2** | Public DNS Record Exposure | DNSRecon returned comprehensive zone details. | Contributes to broader external infrastructure profiling. | Medium |
+| **3** | Multiple Open Network Services | Zenmap identified TCP 135, 139, and 445 on the host. | Unnecessary or unsegmented service exposure increases attack surface. | Medium |
+| **4** | Visible HTTP Metadata | Curl response headers revealed server details. | Provides information useful for reconnaissance mapping. | Low |
+| **5** | Identifiable WAF Protection | Wafw00f detected WAF defensive layers. | Informs analysis of existing perimeter defenses. | Low |
