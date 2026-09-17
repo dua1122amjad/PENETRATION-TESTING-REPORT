@@ -94,3 +94,11 @@ whois example-lab.invalid
 ```
 - **Sanitized Observation:** Demonstrated that WHOIS exposes registrar details, domain status, and name-server configurations.
 - **Security Relevance:** Provides structural and administrative context regarding target domain ownership.
+### 5.2 WhatWeb
+**Objective:** Fingerprint web technologies exposed by the target web application.
+
+```bash
+whatweb example-lab.invalid
+```
+- **Sanitized Observation:** Identified web server components, CMS frameworks, download handlers, and JavaScript libraries.
+- **Security Relevance:** Technology identification assists in prioritizing software update requirements and defensive patch management.
