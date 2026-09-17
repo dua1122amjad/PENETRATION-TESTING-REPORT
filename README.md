@@ -92,9 +92,6 @@ The footprinting phase utilized 6 core Kali Linux tools to combine registration 
 ```bash
 whois example-lab.invalid
 ```
-<p align="center">
-  <img src="Screenshot (whois).png" alt="VirtualBox Setup" width="600" height="337" />
-</p>
 - **Sanitized Observation:** Demonstrated that WHOIS exposes registrar details, domain status, and name-server configurations.
 - **Security Relevance:** Provides structural and administrative context regarding target domain ownership.
 ### 5.2 WhatWeb
