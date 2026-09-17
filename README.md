@@ -102,3 +102,10 @@ whatweb example-lab.invalid
 ```
 - **Sanitized Observation:** Identified web server components, CMS frameworks, download handlers, and JavaScript libraries.
 - **Security Relevance:** Technology identification assists in prioritizing software update requirements and defensive patch management.
+ ### 5.3 Nslookup
+**Objective:** Perform domain name resolution.
+
+```bash
+nslookup example-lab.invalid
+```
+- **Sanitized Observation:** Resolved the target domain to a documentation-safe IP (`192.0.2.10`).
