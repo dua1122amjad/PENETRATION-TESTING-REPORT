@@ -115,4 +115,18 @@ nslookup example-lab.invalid
 ```bash
 curl -I [https://example-lab.invalid](https://example-lab.invalid)
 ```
-- **Sanitized Observation:** Returned HTTP status codes, web server headers, caching parameters, and active API endpoints.
+ **Sanitized Observation:** Returned HTTP status codes, web server headers, caching parameters, and active API endpoints.
+- ### 5.5 Wafw00f
+**Objective:** Detect Web Application Firewall (WAF) presence.
+
+```bash
+wafw00f example-lab.invalid
+```
+- **Sanitized Observation:** Detected active protection mechanisms (e.g., ModSecurity).
+- ### 5.6 DNSRecon
+**Objective:** Enumerate DNS zone details.
+
+```bash
+dnsrecon -d example-lab.invalid
+```
+- **Sanitized Observation:** Successfully enumerated SOA, NS, A, TXT, and SRV records.
