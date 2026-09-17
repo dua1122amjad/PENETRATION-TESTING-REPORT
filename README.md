@@ -130,3 +130,17 @@ wafw00f example-lab.invalid
 dnsrecon -d example-lab.invalid
 ```
 - **Sanitized Observation:** Successfully enumerated SOA, NS, A, TXT, and SRV records.
+ ## 6. Module W2-PM5: Network Scanning with Zenmap
+Network discovery was conducted to evaluate reachable assets and listening services within the authorized lab subnet (192.0.2.0/24).
+### 6.1 Local Network Identification
+
+```cmd
+ipconfig
+```
+Retrieved the host interface parameters prior to scanning.
+### 6.2 Zenmap / Nmap Discovery
+
+```bash
+nmap -sn 192.0.2.0/24
+```
+The scan detected 1 active host (192.0.2.25) with three open TCP services:
