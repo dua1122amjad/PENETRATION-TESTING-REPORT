@@ -102,6 +102,8 @@ whois example-lab.invalid
 ```bash
 whatweb example-lab.invalid
 ```
+<img width="600" height="337" alt="whatweb" src="https://github.com/user-attachments/assets/cbcc307e-bcdd-4b17-81da-61351228c4ca" />
+
 - **Sanitized Observation:** Identified web server components, CMS frameworks, download handlers, and JavaScript libraries.
 - **Security Relevance:** Technology identification assists in prioritizing software update requirements and defensive patch management.
  ### 5.3 Nslookup
