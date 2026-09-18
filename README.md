@@ -112,6 +112,8 @@ whatweb example-lab.invalid
 ```bash
 nslookup example-lab.invalid
 ```
+<img width="600" height="337" alt="nslookup" src="https://github.com/user-attachments/assets/0a7cb382-eeda-4c28-a7bf-29a90d96202c" />
+
 - **Sanitized Observation:** Resolved the target domain to a documentation-safe IP (`192.0.2.10`).
 ### 5.4 Curl -I
 **Objective:** Inspect HTTP response headers.
