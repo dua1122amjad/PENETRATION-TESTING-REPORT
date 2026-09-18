@@ -121,6 +121,8 @@ nslookup example-lab.invalid
 ```bash
 curl -I [https://example-lab.invalid](https://example-lab.invalid)
 ```
+<img width="600" height="337" alt="Curl-I" src="https://github.com/user-attachments/assets/e21dfd88-32d3-4123-ba68-1b039b1c528d" />
+
  **Sanitized Observation:** Returned HTTP status codes, web server headers, caching parameters, and active API endpoints.
 - ### 5.5 Wafw00f
 **Objective:** Detect Web Application Firewall (WAF) presence.
@@ -128,6 +130,8 @@ curl -I [https://example-lab.invalid](https://example-lab.invalid)
 ```bash
 wafw00f example-lab.invalid
 ```
+<img width="600" height="337" alt="wafw00f" src="https://github.com/user-attachments/assets/f05a1ec3-7762-4023-bbca-7b9c3f4e5b47" />
+
 - **Sanitized Observation:** Detected active protection mechanisms (e.g., ModSecurity).
 - ### 5.6 DNSRecon
 **Objective:** Enumerate DNS zone details.
@@ -135,6 +139,8 @@ wafw00f example-lab.invalid
 ```bash
 dnsrecon -d example-lab.invalid
 ```
+<img width="600" height=337" alt="dnsrecon -d" src="https://github.com/user-attachments/assets/e9a60bb2-9847-4cd7-bc01-298bb9518906" />
+
 - **Sanitized Observation:** Successfully enumerated SOA, NS, A, TXT, and SRV records.
  ## 6. Module W2-PM5: Network Scanning with Zenmap
 Network discovery was conducted to evaluate reachable assets and listening services within the authorized lab subnet (192.0.2.0/24).
