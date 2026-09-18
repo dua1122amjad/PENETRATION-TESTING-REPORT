@@ -8,7 +8,7 @@
 
 | Report Field | Details |
 | :--- | :--- |
-| **Analyst** | Cybersecurity Trainee |
+| **Analyst** | Dua Amjad |
 | **Practical Focus** | Footprinting & reconnaissance, network discovery |
 | **Primary Platforms** | Kali Linux and Windows |
 | **Tools Covered** | WHOIS, WhatWeb, Nslookup, Curl, Wafw00f, DNSRecon, Zenmap |
