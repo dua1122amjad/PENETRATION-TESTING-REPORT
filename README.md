@@ -139,7 +139,7 @@ wafw00f example-lab.invalid
 ```bash
 dnsrecon -d example-lab.invalid
 ```
-<img width="600" height=337" alt="dnsrecon -d" src="https://github.com/user-attachments/assets/e9a60bb2-9847-4cd7-bc01-298bb9518906" />
+<img width="600" height="337"alt="dnsrecon -d" src="https://github.com/user-attachments/assets/c9b9a1dc-3f03-4a7e-bcbe-bccf3de0c7af" />
 
 - **Sanitized Observation:** Successfully enumerated SOA, NS, A, TXT, and SRV records.
  ## 6. Module W2-PM5: Network Scanning with Zenmap
